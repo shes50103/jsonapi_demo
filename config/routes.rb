@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   namespace :api do
     jsonapi_resources :orders
+    jsonapi_resources :events
   end
 end
