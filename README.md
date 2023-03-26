@@ -1,24 +1,21 @@
-# README
+# Example
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Basic
 
-Things you may want to cover:
+- http://127.0.0.1:3000/api/orders
+- http://127.0.0.1:3000/api/orders/1
 
-* Ruby version
+## Filter
 
-* System dependencies
+- http://127.0.0.1:3000/api/orders?filter[user]=3
 
-* Configuration
+## Paginator
+- http://127.0.0.1:3000/api/orders?page[offset]=0&page[limit]=2
 
-* Database creation
 
-* Database initialization
+## Sideloading
+- http://127.0.0.1:3000/api/orders/1?include=tickets.event
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Sparse Fieldsets
+- http://127.0.0.1:3000/api/orders/1?fields[events]=name
+- http://127.0.0.1:3000/api/orders/1?include=tickets.event&fields[events]=name&fields[tickets]=event-id,order-id
